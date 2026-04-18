@@ -4,5 +4,6 @@ cdk.out
 *.log
 .env
 .env.local
+.env.gsc
 *.tsbuildinfo
 .DS_Store
