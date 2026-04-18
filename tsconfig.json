@@ -20,9 +20,9 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "outDir": "dist",
-    "rootDir": ".",
+    "rootDir": "./src",
     "typeRoots": ["./node_modules/@types"]
   },
-  "include": ["src/**/*", "bin/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "cdk.out"]
 }
