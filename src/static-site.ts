@@ -50,11 +50,34 @@ export class MicroSaasStaticSite extends Construct {
       autoDeleteObjects: autoDelete,
     });
 
+    // URL rewrite: "/guide" -> "/guide/index.html", "/" -> "/index.html"
+    // Allows pre-rendered sub-path HTML files to serve under clean URLs.
+    const urlRewriteFn = new cloudfront.Function(this, 'UrlRewriteFn', {
+      functionName: `${fqdn.replace(/\./g, '-')}-rewrite`,
+      runtime: cloudfront.FunctionRuntime.JS_2_0,
+      code: cloudfront.FunctionCode.fromInline(`function handler(event) {
+  var request = event.request;
+  var uri = request.uri;
+  if (uri.endsWith('/')) {
+    request.uri += 'index.html';
+  } else if (!/\\.[a-zA-Z0-9]+$/.test(uri)) {
+    request.uri += '/index.html';
+  }
+  return request;
+}`),
+    });
+
     this.distribution = new cloudfront.Distribution(this, 'Distribution', {
       defaultBehavior: {
         origin: origins.S3BucketOrigin.withOriginAccessControl(this.bucket),
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
         compress: true,
+        functionAssociations: [
+          {
+            function: urlRewriteFn,
+            eventType: cloudfront.FunctionEventType.VIEWER_REQUEST,
+          },
+        ],
       },
       defaultRootObject: 'index.html',
       domainNames: [fqdn],
