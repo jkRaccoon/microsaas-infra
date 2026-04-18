@@ -1,6 +1,13 @@
 {
-  "measurementId": "G-FG7KXF7GLR",
-  "notes": "모든 bal.pe.kr 서브도메인이 공유하는 단일 GA4 Measurement ID. 서브도메인별 세그먼트는 GA4 UI 에서 Audiences 로 분리.",
+  "propertyId": "properties/533557200",
+  "propertyDisplayName": "bal.pe.kr 포트폴리오",
+  "measurementId": "G-PDW82YCFFW",
+  "naverWa": "19bf92bdebb1a20",
+  "streamName": "portfolio-web",
+  "streamUri": "https://bal.pe.kr",
+  "targetCurrency": "KRW",
+  "targetTimezone": "Asia/Seoul",
+  "notes": "모든 bal.pe.kr 서브도메인이 공유하는 단일 GA4 속성. site_id / site_category 커스텀 파라미터로 사이트 구분.",
   "conversionEvents": [
     "checklist_completed",
     "verdict_shown",
@@ -11,15 +18,36 @@
     "share_clicked",
     "tool_card_clicked"
   ],
-  "targetCurrency": "KRW",
-  "targetTimezone": "Asia/Seoul",
-  "perDomain": {
-    "bal.pe.kr": "G-PJVS7MBT7S",
-    "pogalwage.bal.pe.kr": "G-B7MPL39ED2",
-    "dsr.bal.pe.kr": "G-C6EJVDGJJN",
-    "jeonse.bal.pe.kr": "G-PDW82YCFFW",
-    "yangdose.bal.pe.kr": "G-KL8VRGNH1Y",
-    "naeyong.bal.pe.kr": "G-5LV5KW37SJ",
-    "jigeup.bal.pe.kr": "G-0RVW10DDDD"
+  "customDimensions": [
+    { "parameterName": "site_id", "displayName": "Site ID", "scope": "EVENT" },
+    { "parameterName": "site_category", "displayName": "Site Category", "scope": "EVENT" }
+  ],
+  "sites": {
+    "pogalwage": { "siteId": "pogalwage", "category": "labor" },
+    "dsr": { "siteId": "dsr", "category": "real_estate" },
+    "jeonse": { "siteId": "jeonse", "category": "real_estate" },
+    "jigeup": { "siteId": "jigeup", "category": "legal" },
+    "naeyong": { "siteId": "naeyong", "category": "legal" },
+    "yangdose": { "siteId": "yangdose", "category": "real_estate" },
+    "haeji": { "siteId": "haeji", "category": "legal" },
+    "bojeung": { "siteId": "bojeung", "category": "real_estate" },
+    "yangdotax": { "siteId": "yangdotax", "category": "real_estate" },
+    "stressdsr": { "siteId": "stressdsr", "category": "real_estate" },
+    "saengae": { "siteId": "saengae", "category": "real_estate" },
+    "cheongcheo": { "siteId": "cheongcheo", "category": "wedding" },
+    "calorie": { "siteId": "calorie", "category": "health" },
+    "imgeum": { "siteId": "imgeum", "category": "labor" },
+    "yeongeum": { "siteId": "yeongeum", "category": "retirement" },
+    "ytchapter": { "siteId": "ytchapter", "category": "content" },
+    "iljul": { "siteId": "iljul", "category": "real_estate" },
+    "cartax": { "siteId": "cartax", "category": "auto" },
+    "tdee": { "siteId": "tdee", "category": "health" },
+    "petfood": { "siteId": "petfood", "category": "pet" },
+    "petage": { "siteId": "petage", "category": "pet" },
+    "chukgum": { "siteId": "chukgum", "category": "wedding" },
+    "jupension": { "siteId": "jupension", "category": "retirement" },
+    "sleepcycle": { "siteId": "sleepcycle", "category": "health" },
+    "serp": { "siteId": "serp", "category": "marketing" },
+    "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
