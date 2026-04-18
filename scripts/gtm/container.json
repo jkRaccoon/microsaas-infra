@@ -1,0 +1,32 @@
+{
+  "publicId": "GTM-WSTVHPFZ",
+  "ga4MeasurementId": "G-FG7KXF7GLR",
+  "customEvents": [
+    "checklist_completed",
+    "verdict_shown",
+    "calculator_opened",
+    "notice_copied",
+    "notice_downloaded",
+    "notice_opened",
+    "epost_clicked",
+    "share_clicked",
+    "tool_card_clicked",
+    "calc_completed",
+    "dsr_calculated",
+    "sensitivity_viewed",
+    "risk_assessed",
+    "hug_clicked",
+    "scenario_calculated",
+    "template_selected",
+    "notice_generated",
+    "jigeup_generated",
+    "jigeup_copied",
+    "jigeup_downloaded",
+    "court_clicked",
+    "hero_cta_clicked",
+    "contact_clicked",
+    "github_clicked",
+    "footer_link_clicked",
+    "roadmap_card_interest"
+  ]
+}

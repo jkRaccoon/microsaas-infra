@@ -13,6 +13,11 @@ export const SCOPES = [
   'https://www.googleapis.com/auth/indexing',
   'https://www.googleapis.com/auth/analytics.edit',
   'https://www.googleapis.com/auth/analytics.readonly',
+  'https://www.googleapis.com/auth/adsense.readonly',
+  'https://www.googleapis.com/auth/tagmanager.edit.containers',
+  'https://www.googleapis.com/auth/tagmanager.edit.containerversions',
+  'https://www.googleapis.com/auth/tagmanager.publish',
+  'https://www.googleapis.com/auth/tagmanager.readonly',
 ];
 
 export function loadEnv() {
