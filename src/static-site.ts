@@ -23,6 +23,12 @@ export interface MicroSaasStaticSiteProps {
   readonly sourcePath?: string;
   /** S3 버킷 삭제 시 객체까지 제거. 개인 프로젝트 기본 true */
   readonly autoDeleteObjects?: boolean;
+  /**
+   * Override the default URL-rewrite CloudFront Function body.
+   * If provided, this replaces the default clean-URL rewrite entirely.
+   * Must be a complete JS 2.0 `function handler(event) { ... }`.
+   */
+  readonly customRewriteFunctionCode?: string;
 }
 
 /**
@@ -54,10 +60,7 @@ export class MicroSaasStaticSite extends Construct {
 
     // URL rewrite: "/guide" -> "/guide/index.html", "/" -> "/index.html"
     // Allows pre-rendered sub-path HTML files to serve under clean URLs.
-    const urlRewriteFn = new cloudfront.Function(this, 'UrlRewriteFn', {
-      functionName: `${fqdn.replace(/\./g, '-')}-rewrite`,
-      runtime: cloudfront.FunctionRuntime.JS_2_0,
-      code: cloudfront.FunctionCode.fromInline(`function handler(event) {
+    const DEFAULT_REWRITE = `function handler(event) {
   var request = event.request;
   var uri = request.uri;
   if (uri.endsWith('/')) {
@@ -66,7 +69,12 @@ export class MicroSaasStaticSite extends Construct {
     request.uri += '/index.html';
   }
   return request;
-}`),
+}`;
+
+    const urlRewriteFn = new cloudfront.Function(this, 'UrlRewriteFn', {
+      functionName: `${fqdn.replace(/\./g, '-')}-rewrite`,
+      runtime: cloudfront.FunctionRuntime.JS_2_0,
+      code: cloudfront.FunctionCode.fromInline(props.customRewriteFunctionCode ?? DEFAULT_REWRITE),
     });
 
     this.distribution = new cloudfront.Distribution(this, 'Distribution', {
