@@ -9,8 +9,8 @@ import * as targets from 'aws-cdk-lib/aws-route53-targets';
 import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
 
 export interface MicroSaasStaticSiteProps {
-  /** 서브도메인 이름. 예: 'pogalwage' -> pogalwage.bal.pe.kr */
-  readonly subdomain: string;
+  /** 서브도메인 이름. 예: 'pogalwage' -> pogalwage.bal.pe.kr. 미지정 시 APEX(루트) 도메인. */
+  readonly subdomain?: string;
   /** 기존 Route53 호스팅 존 ID */
   readonly hostedZoneId: string;
   /** 호스팅 존 이름. 예: 'bal.pe.kr' */
@@ -39,7 +39,9 @@ export class MicroSaasStaticSite extends Construct {
     super(scope, id);
 
     const autoDelete = props.autoDeleteObjects ?? true;
-    const fqdn = `${props.subdomain}.${props.hostedZoneName}`;
+    const fqdn = props.subdomain
+      ? `${props.subdomain}.${props.hostedZoneName}`
+      : props.hostedZoneName;
     this.domainName = fqdn;
 
     this.bucket = new s3.Bucket(this, 'SiteBucket', {
