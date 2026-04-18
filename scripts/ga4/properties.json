@@ -12,5 +12,14 @@
     "tool_card_clicked"
   ],
   "targetCurrency": "KRW",
-  "targetTimezone": "Asia/Seoul"
+  "targetTimezone": "Asia/Seoul",
+  "perDomain": {
+    "bal.pe.kr": "G-PJVS7MBT7S",
+    "pogalwage.bal.pe.kr": "G-B7MPL39ED2",
+    "dsr.bal.pe.kr": "G-C6EJVDGJJN",
+    "jeonse.bal.pe.kr": "G-PDW82YCFFW",
+    "yangdose.bal.pe.kr": "G-KL8VRGNH1Y",
+    "naeyong.bal.pe.kr": "G-5LV5KW37SJ",
+    "jigeup.bal.pe.kr": "G-0RVW10DDDD"
+  }
 }
