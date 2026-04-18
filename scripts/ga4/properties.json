@@ -1,0 +1,16 @@
+{
+  "measurementId": "G-FG7KXF7GLR",
+  "notes": "모든 bal.pe.kr 서브도메인이 공유하는 단일 GA4 Measurement ID. 서브도메인별 세그먼트는 GA4 UI 에서 Audiences 로 분리.",
+  "conversionEvents": [
+    "checklist_completed",
+    "verdict_shown",
+    "calculator_opened",
+    "notice_copied",
+    "notice_downloaded",
+    "epost_clicked",
+    "share_clicked",
+    "tool_card_clicked"
+  ],
+  "targetCurrency": "KRW",
+  "targetTimezone": "Asia/Seoul"
+}

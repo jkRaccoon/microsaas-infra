@@ -3,7 +3,6 @@ dist
 cdk.out
 *.log
 .env
-.env.local
-.env.gsc
+.env.*
 *.tsbuildinfo
 .DS_Store
