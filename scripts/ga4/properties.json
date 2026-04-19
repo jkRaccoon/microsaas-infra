@@ -93,6 +93,7 @@
     "printspec": { "siteId": "printspec", "category": "digital" },
     "hangulart": { "siteId": "hangulart", "category": "life" },
     "hwppdf": { "siteId": "hwppdf", "category": "digital" },
+    "esim": { "siteId": "esim", "category": "life" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
