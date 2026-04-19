@@ -75,6 +75,7 @@
     "babysleep": { "siteId": "babysleep", "category": "parenting" },
     "yebang": { "siteId": "yebang", "category": "parenting" },
     "milestone": { "siteId": "milestone", "category": "parenting" },
+    "instaline": { "siteId": "instaline", "category": "life" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
