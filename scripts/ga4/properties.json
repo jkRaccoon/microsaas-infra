@@ -105,6 +105,7 @@
     "blackfx": { "siteId": "blackfx", "category": "shopping" },
     "freetax": { "siteId": "freetax", "category": "realestate" },
     "gacha": { "siteId": "gacha", "category": "digital" },
+    "coupangsp": { "siteId": "coupangsp", "category": "shopping" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
