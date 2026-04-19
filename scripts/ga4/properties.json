@@ -77,6 +77,7 @@
     "milestone": { "siteId": "milestone", "category": "parenting" },
     "instaline": { "siteId": "instaline", "category": "life" },
     "evcharge": { "siteId": "evcharge", "category": "car" },
+    "usstock": { "siteId": "usstock", "category": "finance" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
