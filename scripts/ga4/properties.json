@@ -84,6 +84,7 @@
     "yeonbi": { "siteId": "yeonbi", "category": "car" },
     "cardfx": { "siteId": "cardfx", "category": "life" },
     "chupjang": { "siteId": "chupjang", "category": "wedding" },
+    "pettoxic": { "siteId": "pettoxic", "category": "pet" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
