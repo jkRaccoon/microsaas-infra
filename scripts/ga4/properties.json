@@ -88,6 +88,7 @@
     "suday": { "siteId": "suday", "category": "life" },
     "hangulfix": { "siteId": "hangulfix", "category": "digital" },
     "suwords": { "siteId": "suwords", "category": "education" },
+    "doljan": { "siteId": "doljan", "category": "wedding" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
