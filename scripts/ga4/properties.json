@@ -80,6 +80,7 @@
     "usstock": { "siteId": "usstock", "category": "finance" },
     "hanja": { "siteId": "hanja", "category": "education" },
     "myeonhur": { "siteId": "myeonhur", "category": "car" },
+    "ogcheck": { "siteId": "ogcheck", "category": "digital" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
