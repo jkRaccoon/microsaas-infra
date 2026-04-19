@@ -104,6 +104,7 @@
     "shortshook": { "siteId": "shortshook", "category": "digital" },
     "blackfx": { "siteId": "blackfx", "category": "shopping" },
     "freetax": { "siteId": "freetax", "category": "realestate" },
+    "gacha": { "siteId": "gacha", "category": "digital" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
