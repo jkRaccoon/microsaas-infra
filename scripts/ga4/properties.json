@@ -106,6 +106,7 @@
     "freetax": { "siteId": "freetax", "category": "realestate" },
     "gacha": { "siteId": "gacha", "category": "digital" },
     "coupangsp": { "siteId": "coupangsp", "category": "shopping" },
+    "cronkr": { "siteId": "cronkr", "category": "digital" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
