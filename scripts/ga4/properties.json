@@ -86,6 +86,7 @@
     "chupjang": { "siteId": "chupjang", "category": "wedding" },
     "pettoxic": { "siteId": "pettoxic", "category": "pet" },
     "suday": { "siteId": "suday", "category": "life" },
+    "hangulfix": { "siteId": "hangulfix", "category": "digital" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
