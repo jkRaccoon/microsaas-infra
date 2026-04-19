@@ -81,6 +81,7 @@
     "hanja": { "siteId": "hanja", "category": "education" },
     "myeonhur": { "siteId": "myeonhur", "category": "car" },
     "ogcheck": { "siteId": "ogcheck", "category": "digital" },
+    "yeonbi": { "siteId": "yeonbi", "category": "car" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
