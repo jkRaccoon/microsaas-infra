@@ -94,6 +94,7 @@
     "hangulart": { "siteId": "hangulart", "category": "life" },
     "hwppdf": { "siteId": "hwppdf", "category": "digital" },
     "esim": { "siteId": "esim", "category": "life" },
+    "petvax": { "siteId": "petvax", "category": "pet" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
