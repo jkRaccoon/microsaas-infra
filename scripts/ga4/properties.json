@@ -107,6 +107,7 @@
     "gacha": { "siteId": "gacha", "category": "digital" },
     "coupangsp": { "siteId": "coupangsp", "category": "shopping" },
     "cronkr": { "siteId": "cronkr", "category": "digital" },
+    "jodiac": { "siteId": "jodiac", "category": "life" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
