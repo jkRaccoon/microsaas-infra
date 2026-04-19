@@ -29,6 +29,12 @@ export interface MicroSaasStaticSiteProps {
    * Must be a complete JS 2.0 `function handler(event) { ... }`.
    */
   readonly customRewriteFunctionCode?: string;
+  /**
+   * 기존에 이미 존재하는 CloudFront Origin Access Control 의 ID.
+   * CloudFront OAC 계정 한도(100개)에 도달했을 때 공용 OAC 를 재사용하기 위함.
+   * 지정하면 새 OAC 를 만들지 않고 import 해서 연결합니다.
+   */
+  readonly sharedOriginAccessControlId?: string;
 }
 
 /**
@@ -77,9 +83,19 @@ export class MicroSaasStaticSite extends Construct {
       code: cloudfront.FunctionCode.fromInline(props.customRewriteFunctionCode ?? DEFAULT_REWRITE),
     });
 
+    const s3Origin = props.sharedOriginAccessControlId
+      ? origins.S3BucketOrigin.withOriginAccessControl(this.bucket, {
+          originAccessControl: cloudfront.S3OriginAccessControl.fromOriginAccessControlId(
+            this,
+            'SharedOAC',
+            props.sharedOriginAccessControlId,
+          ),
+        })
+      : origins.S3BucketOrigin.withOriginAccessControl(this.bucket);
+
     this.distribution = new cloudfront.Distribution(this, 'Distribution', {
       defaultBehavior: {
-        origin: origins.S3BucketOrigin.withOriginAccessControl(this.bucket),
+        origin: s3Origin,
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
         compress: true,
         functionAssociations: [
