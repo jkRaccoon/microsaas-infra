@@ -95,6 +95,7 @@
     "hwppdf": { "siteId": "hwppdf", "category": "digital" },
     "esim": { "siteId": "esim", "category": "life" },
     "petvax": { "siteId": "petvax", "category": "pet" },
+    "imgocr": { "siteId": "imgocr", "category": "digital" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
