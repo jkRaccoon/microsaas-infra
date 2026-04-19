@@ -97,6 +97,7 @@
     "petvax": { "siteId": "petvax", "category": "pet" },
     "imgocr": { "siteId": "imgocr", "category": "digital" },
     "deungki": { "siteId": "deungki", "category": "realestate" },
+    "imtae": { "siteId": "imtae", "category": "real_estate" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
