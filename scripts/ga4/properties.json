@@ -87,6 +87,7 @@
     "pettoxic": { "siteId": "pettoxic", "category": "pet" },
     "suday": { "siteId": "suday", "category": "life" },
     "hangulfix": { "siteId": "hangulfix", "category": "digital" },
+    "suwords": { "siteId": "suwords", "category": "education" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
