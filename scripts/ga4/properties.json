@@ -96,6 +96,7 @@
     "esim": { "siteId": "esim", "category": "life" },
     "petvax": { "siteId": "petvax", "category": "pet" },
     "imgocr": { "siteId": "imgocr", "category": "digital" },
+    "deungki": { "siteId": "deungki", "category": "realestate" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
