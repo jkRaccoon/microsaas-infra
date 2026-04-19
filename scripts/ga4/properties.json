@@ -83,6 +83,7 @@
     "ogcheck": { "siteId": "ogcheck", "category": "digital" },
     "yeonbi": { "siteId": "yeonbi", "category": "car" },
     "cardfx": { "siteId": "cardfx", "category": "life" },
+    "chupjang": { "siteId": "chupjang", "category": "wedding" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
