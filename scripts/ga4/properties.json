@@ -90,6 +90,7 @@
     "suwords": { "siteId": "suwords", "category": "education" },
     "doljan": { "siteId": "doljan", "category": "wedding" },
     "noraekey": { "siteId": "noraekey", "category": "life" },
+    "printspec": { "siteId": "printspec", "category": "digital" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
