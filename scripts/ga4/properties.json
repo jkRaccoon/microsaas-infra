@@ -79,6 +79,7 @@
     "evcharge": { "siteId": "evcharge", "category": "car" },
     "usstock": { "siteId": "usstock", "category": "finance" },
     "hanja": { "siteId": "hanja", "category": "education" },
+    "myeonhur": { "siteId": "myeonhur", "category": "car" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
