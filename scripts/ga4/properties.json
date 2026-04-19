@@ -76,6 +76,7 @@
     "yebang": { "siteId": "yebang", "category": "parenting" },
     "milestone": { "siteId": "milestone", "category": "parenting" },
     "instaline": { "siteId": "instaline", "category": "life" },
+    "evcharge": { "siteId": "evcharge", "category": "car" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
