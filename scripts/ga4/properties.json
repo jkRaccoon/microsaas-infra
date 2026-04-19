@@ -89,6 +89,7 @@
     "hangulfix": { "siteId": "hangulfix", "category": "digital" },
     "suwords": { "siteId": "suwords", "category": "education" },
     "doljan": { "siteId": "doljan", "category": "wedding" },
+    "noraekey": { "siteId": "noraekey", "category": "life" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
