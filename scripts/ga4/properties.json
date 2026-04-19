@@ -100,6 +100,7 @@
     "deungki": { "siteId": "deungki", "category": "realestate" },
     "imtae": { "siteId": "imtae", "category": "real_estate" },
     "dsplit": { "siteId": "dsplit", "category": "life" },
+    "yttime": { "siteId": "yttime", "category": "digital" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
