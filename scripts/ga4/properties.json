@@ -101,6 +101,7 @@
     "imtae": { "siteId": "imtae", "category": "real_estate" },
     "dsplit": { "siteId": "dsplit", "category": "life" },
     "yttime": { "siteId": "yttime", "category": "digital" },
+    "shortshook": { "siteId": "shortshook", "category": "digital" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
