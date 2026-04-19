@@ -91,6 +91,7 @@
     "doljan": { "siteId": "doljan", "category": "wedding" },
     "noraekey": { "siteId": "noraekey", "category": "life" },
     "printspec": { "siteId": "printspec", "category": "digital" },
+    "hangulart": { "siteId": "hangulart", "category": "life" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
