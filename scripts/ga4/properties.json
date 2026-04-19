@@ -98,6 +98,7 @@
     "imgocr": { "siteId": "imgocr", "category": "digital" },
     "deungki": { "siteId": "deungki", "category": "realestate" },
     "imtae": { "siteId": "imtae", "category": "real_estate" },
+    "dsplit": { "siteId": "dsplit", "category": "life" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
