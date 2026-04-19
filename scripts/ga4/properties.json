@@ -85,6 +85,7 @@
     "cardfx": { "siteId": "cardfx", "category": "life" },
     "chupjang": { "siteId": "chupjang", "category": "wedding" },
     "pettoxic": { "siteId": "pettoxic", "category": "pet" },
+    "suday": { "siteId": "suday", "category": "life" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
