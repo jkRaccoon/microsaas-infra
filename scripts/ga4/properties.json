@@ -92,6 +92,7 @@
     "noraekey": { "siteId": "noraekey", "category": "life" },
     "printspec": { "siteId": "printspec", "category": "digital" },
     "hangulart": { "siteId": "hangulart", "category": "life" },
+    "hwppdf": { "siteId": "hwppdf", "category": "digital" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
