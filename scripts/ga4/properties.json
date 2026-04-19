@@ -88,6 +88,7 @@
     "suday": { "siteId": "suday", "category": "life" },
     "hangulfix": { "siteId": "hangulfix", "category": "digital" },
     "suwords": { "siteId": "suwords", "category": "education" },
+    "readlvl": { "siteId": "readlvl", "category": "life" },
     "doljan": { "siteId": "doljan", "category": "wedding" },
     "noraekey": { "siteId": "noraekey", "category": "life" },
     "printspec": { "siteId": "printspec", "category": "digital" },
