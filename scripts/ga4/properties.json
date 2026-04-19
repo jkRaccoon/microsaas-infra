@@ -103,6 +103,7 @@
     "yttime": { "siteId": "yttime", "category": "digital" },
     "shortshook": { "siteId": "shortshook", "category": "digital" },
     "blackfx": { "siteId": "blackfx", "category": "shopping" },
+    "freetax": { "siteId": "freetax", "category": "realestate" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
 }
