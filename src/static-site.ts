@@ -30,11 +30,22 @@ export interface MicroSaasStaticSiteProps {
    */
   readonly customRewriteFunctionCode?: string;
   /**
-   * 기존에 이미 존재하는 CloudFront Origin Access Control 의 ID.
-   * CloudFront OAC 계정 한도(100개)에 도달했을 때 공용 OAC 를 재사용하기 위함.
-   * 지정하면 새 OAC 를 만들지 않고 import 해서 연결합니다.
+   * 공유 CloudFront Function ARN 을 지정하면 사이트별 신규 Function 생성을 건너뛰고
+   * 기존 Function 을 재사용한다. CloudFront Functions 계정 한도(기본 100)를 우회.
+   * 지정 시 `customRewriteFunctionCode` 는 무시된다.
+   */
+  readonly sharedRewriteFunctionArn?: string;
+  /**
+   * 공유 CloudFront Origin Access Control ID 를 지정하면 사이트별 신규 OAC 생성을
+   * 건너뛰고 기존 OAC 를 재사용한다. OAC 계정 한도 우회. S3 버킷 정책은 해당 OAC +
+   * Distribution SourceArn 조건으로 교차 접근 방지.
    */
   readonly sharedOriginAccessControlId?: string;
+  /**
+   * 공유 Origin Access Identity ID 를 지정하면 사이트별 신규 OAC 를 만들지 않고
+   * 레거시 OAI 패턴으로 동작한다. OAC/OAI 중 하나만 택일; 둘 다 지정 시 OAC 우선.
+   */
+  readonly sharedOriginAccessIdentityId?: string;
 }
 
 /**
@@ -77,21 +88,39 @@ export class MicroSaasStaticSite extends Construct {
   return request;
 }`;
 
-    const urlRewriteFn = new cloudfront.Function(this, 'UrlRewriteFn', {
-      functionName: `${fqdn.replace(/\./g, '-')}-rewrite`,
-      runtime: cloudfront.FunctionRuntime.JS_2_0,
-      code: cloudfront.FunctionCode.fromInline(props.customRewriteFunctionCode ?? DEFAULT_REWRITE),
-    });
-
-    const s3Origin = props.sharedOriginAccessControlId
-      ? origins.S3BucketOrigin.withOriginAccessControl(this.bucket, {
-          originAccessControl: cloudfront.S3OriginAccessControl.fromOriginAccessControlId(
-            this,
-            'SharedOAC',
-            props.sharedOriginAccessControlId,
-          ),
+    const urlRewriteFn: cloudfront.IFunction = props.sharedRewriteFunctionArn
+      ? cloudfront.Function.fromFunctionAttributes(this, 'UrlRewriteFn', {
+          functionArn: props.sharedRewriteFunctionArn,
+          functionName: props.sharedRewriteFunctionArn.split('/').pop() ?? 'shared-rewrite',
         })
-      : origins.S3BucketOrigin.withOriginAccessControl(this.bucket);
+      : new cloudfront.Function(this, 'UrlRewriteFn', {
+          functionName: `${fqdn.replace(/\./g, '-')}-rewrite`,
+          runtime: cloudfront.FunctionRuntime.JS_2_0,
+          code: cloudfront.FunctionCode.fromInline(props.customRewriteFunctionCode ?? DEFAULT_REWRITE),
+        });
+
+    let s3Origin: cloudfront.IOrigin;
+    if (props.sharedOriginAccessControlId) {
+      s3Origin = origins.S3BucketOrigin.withOriginAccessControl(this.bucket, {
+        originAccessControl: cloudfront.S3OriginAccessControl.fromOriginAccessControlId(
+          this,
+          'SharedOAC',
+          props.sharedOriginAccessControlId,
+        ),
+      });
+    } else if (props.sharedOriginAccessIdentityId) {
+      const sharedOai = cloudfront.OriginAccessIdentity.fromOriginAccessIdentityId(
+        this,
+        'SharedOAI',
+        props.sharedOriginAccessIdentityId,
+      );
+      this.bucket.grantRead(sharedOai);
+      s3Origin = origins.S3BucketOrigin.withOriginAccessIdentity(this.bucket, {
+        originAccessIdentity: sharedOai,
+      });
+    } else {
+      s3Origin = origins.S3BucketOrigin.withOriginAccessControl(this.bucket);
+    }
 
     this.distribution = new cloudfront.Distribution(this, 'Distribution', {
       defaultBehavior: {
