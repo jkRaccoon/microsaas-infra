@@ -430,6 +430,22 @@
     "saju": {
       "siteId": "saju",
       "category": "quiz"
+    },
+    "gamecal": {
+      "siteId": "gamecal",
+      "category": "game"
+    },
+    "mapleexp": {
+      "siteId": "mapleexp",
+      "category": "game"
+    },
+    "lolmmr": {
+      "siteId": "lolmmr",
+      "category": "game"
+    },
+    "steamfx": {
+      "siteId": "steamfx",
+      "category": "game"
     }
   }
 }
