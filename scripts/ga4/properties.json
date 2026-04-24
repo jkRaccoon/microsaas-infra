@@ -19,62 +19,237 @@
     "tool_card_clicked"
   ],
   "customDimensions": [
-    { "parameterName": "site_id", "displayName": "Site ID", "scope": "EVENT" },
-    { "parameterName": "site_category", "displayName": "Site Category", "scope": "EVENT" }
+    {
+      "parameterName": "site_id",
+      "displayName": "Site ID",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "site_category",
+      "displayName": "Site Category",
+      "scope": "EVENT"
+    }
   ],
   "sites": {
-    "pogalwage": { "siteId": "pogalwage", "category": "labor" },
-    "dsr": { "siteId": "dsr", "category": "real_estate" },
-    "jeonse": { "siteId": "jeonse", "category": "real_estate" },
-    "jigeup": { "siteId": "jigeup", "category": "legal" },
-    "naeyong": { "siteId": "naeyong", "category": "legal" },
-    "yangdose": { "siteId": "yangdose", "category": "real_estate" },
-    "haeji": { "siteId": "haeji", "category": "legal" },
-    "bojeung": { "siteId": "bojeung", "category": "real_estate" },
-    "yangdotax": { "siteId": "yangdotax", "category": "real_estate" },
-    "stressdsr": { "siteId": "stressdsr", "category": "real_estate" },
-    "saengae": { "siteId": "saengae", "category": "real_estate" },
-    "cheongcheo": { "siteId": "cheongcheo", "category": "wedding" },
-    "calorie": { "siteId": "calorie", "category": "health" },
-    "imgeum": { "siteId": "imgeum", "category": "labor" },
-    "yeongeum": { "siteId": "yeongeum", "category": "retirement" },
-    "ytchapter": { "siteId": "ytchapter", "category": "content" },
-    "iljul": { "siteId": "iljul", "category": "real_estate" },
-    "cartax": { "siteId": "cartax", "category": "auto" },
-    "tdee": { "siteId": "tdee", "category": "health" },
-    "petfood": { "siteId": "petfood", "category": "pet" },
-    "petage": { "siteId": "petage", "category": "pet" },
-    "chukgum": { "siteId": "chukgum", "category": "wedding" },
-    "jupension": { "siteId": "jupension", "category": "retirement" },
-    "sleepcycle": { "siteId": "sleepcycle", "category": "health" },
-    "serp": { "siteId": "serp", "category": "marketing" },
-    "geunro": { "siteId": "geunro", "category": "labor" },
-    "sabo": { "siteId": "sabo", "category": "labor" },
-    "jeondae": { "siteId": "jeondae", "category": "real_estate" },
-    "wedbudget": { "siteId": "wedbudget", "category": "wedding" },
-    "chukui": { "siteId": "chukui", "category": "wedding" },
-    "mannai": { "siteId": "mannai", "category": "life" },
-    "yeonmal": { "siteId": "yeonmal", "category": "labor" },
-    "heic": { "siteId": "heic", "category": "digital" },
-    "coupangfee": { "siteId": "coupangfee", "category": "shopping" },
-    "chwidse": { "siteId": "chwidse", "category": "real_estate" },
-    "smartname": { "siteId": "smartname", "category": "shopping" },
-    "pregweek": { "siteId": "pregweek", "category": "parenting" },
-    "eunhealth": { "siteId": "eunhealth", "category": "retirement" },
-    "xldiff": { "siteId": "xldiff", "category": "digital" },
-    "aitoken": { "siteId": "aitoken", "category": "digital" },
-    "privacy": { "siteId": "privacy", "category": "legal" },
-    "firekr": { "siteId": "firekr", "category": "retirement" },
-    "exif": { "siteId": "exif", "category": "digital" },
-    "cheongyak": { "siteId": "cheongyak", "category": "real_estate" },
-    "jiggu": { "siteId": "jiggu", "category": "shopping" },
-    "racepace": { "siteId": "racepace", "category": "health" },
-    "diaper": { "siteId": "diaper", "category": "parenting" },
-    "suyu": { "siteId": "suyu", "category": "parenting" },
-    "iyusik": { "siteId": "iyusik", "category": "parenting" },
-    "babysleep": { "siteId": "babysleep", "category": "parenting" },
-    "yebang": { "siteId": "yebang", "category": "parenting" },
-    "milestone": { "siteId": "milestone", "category": "parenting" },
-    "bal-hub": { "siteId": "hub", "category": "hub" }
+    "pogalwage": {
+      "siteId": "pogalwage",
+      "category": "labor"
+    },
+    "dsr": {
+      "siteId": "dsr",
+      "category": "real_estate"
+    },
+    "jeonse": {
+      "siteId": "jeonse",
+      "category": "real_estate"
+    },
+    "jigeup": {
+      "siteId": "jigeup",
+      "category": "legal"
+    },
+    "naeyong": {
+      "siteId": "naeyong",
+      "category": "legal"
+    },
+    "yangdose": {
+      "siteId": "yangdose",
+      "category": "real_estate"
+    },
+    "haeji": {
+      "siteId": "haeji",
+      "category": "legal"
+    },
+    "bojeung": {
+      "siteId": "bojeung",
+      "category": "real_estate"
+    },
+    "yangdotax": {
+      "siteId": "yangdotax",
+      "category": "real_estate"
+    },
+    "stressdsr": {
+      "siteId": "stressdsr",
+      "category": "real_estate"
+    },
+    "saengae": {
+      "siteId": "saengae",
+      "category": "real_estate"
+    },
+    "cheongcheo": {
+      "siteId": "cheongcheo",
+      "category": "wedding"
+    },
+    "calorie": {
+      "siteId": "calorie",
+      "category": "health"
+    },
+    "imgeum": {
+      "siteId": "imgeum",
+      "category": "labor"
+    },
+    "yeongeum": {
+      "siteId": "yeongeum",
+      "category": "retirement"
+    },
+    "ytchapter": {
+      "siteId": "ytchapter",
+      "category": "content"
+    },
+    "iljul": {
+      "siteId": "iljul",
+      "category": "real_estate"
+    },
+    "cartax": {
+      "siteId": "cartax",
+      "category": "auto"
+    },
+    "tdee": {
+      "siteId": "tdee",
+      "category": "health"
+    },
+    "petfood": {
+      "siteId": "petfood",
+      "category": "pet"
+    },
+    "petage": {
+      "siteId": "petage",
+      "category": "pet"
+    },
+    "chukgum": {
+      "siteId": "chukgum",
+      "category": "wedding"
+    },
+    "jupension": {
+      "siteId": "jupension",
+      "category": "retirement"
+    },
+    "sleepcycle": {
+      "siteId": "sleepcycle",
+      "category": "health"
+    },
+    "serp": {
+      "siteId": "serp",
+      "category": "marketing"
+    },
+    "geunro": {
+      "siteId": "geunro",
+      "category": "labor"
+    },
+    "sabo": {
+      "siteId": "sabo",
+      "category": "labor"
+    },
+    "jeondae": {
+      "siteId": "jeondae",
+      "category": "real_estate"
+    },
+    "wedbudget": {
+      "siteId": "wedbudget",
+      "category": "wedding"
+    },
+    "chukui": {
+      "siteId": "chukui",
+      "category": "wedding"
+    },
+    "mannai": {
+      "siteId": "mannai",
+      "category": "life"
+    },
+    "yeonmal": {
+      "siteId": "yeonmal",
+      "category": "labor"
+    },
+    "heic": {
+      "siteId": "heic",
+      "category": "digital"
+    },
+    "coupangfee": {
+      "siteId": "coupangfee",
+      "category": "shopping"
+    },
+    "chwidse": {
+      "siteId": "chwidse",
+      "category": "real_estate"
+    },
+    "smartname": {
+      "siteId": "smartname",
+      "category": "shopping"
+    },
+    "pregweek": {
+      "siteId": "pregweek",
+      "category": "parenting"
+    },
+    "eunhealth": {
+      "siteId": "eunhealth",
+      "category": "retirement"
+    },
+    "xldiff": {
+      "siteId": "xldiff",
+      "category": "digital"
+    },
+    "aitoken": {
+      "siteId": "aitoken",
+      "category": "digital"
+    },
+    "privacy": {
+      "siteId": "privacy",
+      "category": "legal"
+    },
+    "firekr": {
+      "siteId": "firekr",
+      "category": "retirement"
+    },
+    "exif": {
+      "siteId": "exif",
+      "category": "digital"
+    },
+    "cheongyak": {
+      "siteId": "cheongyak",
+      "category": "real_estate"
+    },
+    "jiggu": {
+      "siteId": "jiggu",
+      "category": "shopping"
+    },
+    "racepace": {
+      "siteId": "racepace",
+      "category": "health"
+    },
+    "diaper": {
+      "siteId": "diaper",
+      "category": "parenting"
+    },
+    "suyu": {
+      "siteId": "suyu",
+      "category": "parenting"
+    },
+    "iyusik": {
+      "siteId": "iyusik",
+      "category": "parenting"
+    },
+    "babysleep": {
+      "siteId": "babysleep",
+      "category": "parenting"
+    },
+    "yebang": {
+      "siteId": "yebang",
+      "category": "parenting"
+    },
+    "milestone": {
+      "siteId": "milestone",
+      "category": "parenting"
+    },
+    "bal-hub": {
+      "siteId": "hub",
+      "category": "hub"
+    },
+    "yttitle": {
+      "siteId": "yttitle",
+      "category": "youtube"
+    },
+    "yttime": {
+      "siteId": "yttime",
+      "category": "youtube"
+    }
   }
 }
