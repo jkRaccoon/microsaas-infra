@@ -390,6 +390,18 @@
     "bpm": {
       "siteId": "bpm",
       "category": "music"
+    },
+    "fxrate": {
+      "siteId": "fxrate",
+      "category": "finance"
+    },
+    "flytime": {
+      "siteId": "flytime",
+      "category": "travel"
+    },
+    "yeogwon": {
+      "siteId": "yeogwon",
+      "category": "lifestyle"
     }
   }
 }
