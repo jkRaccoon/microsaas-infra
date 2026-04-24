@@ -418,6 +418,10 @@
     "yttitle": {
       "siteId": "yttitle",
       "category": "youtube"
+    },
+    "doryeon": {
+      "siteId": "doryeon",
+      "category": "print"
     }
   }
 }
