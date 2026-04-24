@@ -239,16 +239,184 @@
       "siteId": "milestone",
       "category": "parenting"
     },
+    "instaline": {
+      "siteId": "instaline",
+      "category": "life"
+    },
+    "evcharge": {
+      "siteId": "evcharge",
+      "category": "car"
+    },
+    "usstock": {
+      "siteId": "usstock",
+      "category": "finance"
+    },
+    "hanja": {
+      "siteId": "hanja",
+      "category": "education"
+    },
+    "myeonhur": {
+      "siteId": "myeonhur",
+      "category": "car"
+    },
+    "ogcheck": {
+      "siteId": "ogcheck",
+      "category": "digital"
+    },
+    "yeonbi": {
+      "siteId": "yeonbi",
+      "category": "car"
+    },
+    "cardfx": {
+      "siteId": "cardfx",
+      "category": "life"
+    },
+    "chupjang": {
+      "siteId": "chupjang",
+      "category": "wedding"
+    },
+    "pettoxic": {
+      "siteId": "pettoxic",
+      "category": "pet"
+    },
+    "suday": {
+      "siteId": "suday",
+      "category": "life"
+    },
+    "hangulfix": {
+      "siteId": "hangulfix",
+      "category": "digital"
+    },
+    "suwords": {
+      "siteId": "suwords",
+      "category": "education"
+    },
+    "readlvl": {
+      "siteId": "readlvl",
+      "category": "life"
+    },
+    "doljan": {
+      "siteId": "doljan",
+      "category": "wedding"
+    },
+    "noraekey": {
+      "siteId": "noraekey",
+      "category": "life"
+    },
+    "printspec": {
+      "siteId": "printspec",
+      "category": "digital"
+    },
+    "hangulart": {
+      "siteId": "hangulart",
+      "category": "life"
+    },
+    "hwppdf": {
+      "siteId": "hwppdf",
+      "category": "digital"
+    },
+    "esim": {
+      "siteId": "esim",
+      "category": "life"
+    },
+    "petvax": {
+      "siteId": "petvax",
+      "category": "pet"
+    },
+    "imgocr": {
+      "siteId": "imgocr",
+      "category": "digital"
+    },
+    "deungki": {
+      "siteId": "deungki",
+      "category": "realestate"
+    },
+    "imtae": {
+      "siteId": "imtae",
+      "category": "real_estate"
+    },
+    "dsplit": {
+      "siteId": "dsplit",
+      "category": "life"
+    },
+    "yttime": {
+      "siteId": "yttime",
+      "category": "digital"
+    },
+    "shortshook": {
+      "siteId": "shortshook",
+      "category": "digital"
+    },
+    "blackfx": {
+      "siteId": "blackfx",
+      "category": "shopping"
+    },
+    "freetax": {
+      "siteId": "freetax",
+      "category": "realestate"
+    },
+    "gacha": {
+      "siteId": "gacha",
+      "category": "digital"
+    },
+    "coupangsp": {
+      "siteId": "coupangsp",
+      "category": "shopping"
+    },
+    "cronkr": {
+      "siteId": "cronkr",
+      "category": "digital"
+    },
+    "jodiac": {
+      "siteId": "jodiac",
+      "category": "life"
+    },
+    "babypctl": {
+      "siteId": "babypctl",
+      "category": "parenting"
+    },
     "bal-hub": {
       "siteId": "hub",
       "category": "hub"
     },
+    "chwideung": {
+      "siteId": "chwideung",
+      "category": "vehicle"
+    },
+    "bmikr": {
+      "siteId": "bmikr",
+      "category": "health"
+    },
+    "bpm": {
+      "siteId": "bpm",
+      "category": "music"
+    },
+    "fxrate": {
+      "siteId": "fxrate",
+      "category": "finance"
+    },
+    "flytime": {
+      "siteId": "flytime",
+      "category": "travel"
+    },
+    "yeogwon": {
+      "siteId": "yeogwon",
+      "category": "lifestyle"
+    },
+    "dday": {
+      "siteId": "dday",
+      "category": "life"
+    },
+    "holiday": {
+      "siteId": "holiday",
+      "category": "life"
+    },
+    "meetcost": {
+      "siteId": "meetcost",
+      "category": "life"
+    },
     "yttitle": {
       "siteId": "yttitle",
-      "category": "youtube"
-    },
-    "yttime": {
-      "siteId": "yttime",
       "category": "youtube"
     }
   }
