@@ -422,6 +422,14 @@
     "doryeon": {
       "siteId": "doryeon",
       "category": "print"
+    },
+    "kmbti": {
+      "siteId": "kmbti",
+      "category": "quiz"
+    },
+    "saju": {
+      "siteId": "saju",
+      "category": "quiz"
     }
   }
 }
