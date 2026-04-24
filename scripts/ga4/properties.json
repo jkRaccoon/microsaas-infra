@@ -108,6 +108,9 @@
     "coupangsp": { "siteId": "coupangsp", "category": "shopping" },
     "cronkr": { "siteId": "cronkr", "category": "digital" },
     "jodiac": { "siteId": "jodiac", "category": "life" },
+    "dday": { "siteId": "dday", "category": "life" },
+    "holiday": { "siteId": "holiday", "category": "life" },
+    "meetcost": { "siteId": "meetcost", "category": "life" },
     "babypctl": { "siteId": "babypctl", "category": "parenting" },
     "bal-hub": { "siteId": "hub", "category": "hub" }
   }
