@@ -450,6 +450,10 @@
     "steamfx": {
       "siteId": "steamfx",
       "category": "game"
+    },
+    "delivery-compare": {
+      "siteId": "delivery-compare",
+      "category": "shopping"
     }
   }
 }
