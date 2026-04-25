@@ -167,6 +167,10 @@
       "siteId": "coupangfee",
       "category": "shopping"
     },
+    "smartfee": {
+      "siteId": "smartfee",
+      "category": "seller"
+    },
     "chwidse": {
       "siteId": "chwidse",
       "category": "real_estate"
