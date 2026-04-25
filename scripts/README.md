@@ -35,6 +35,8 @@ node scripts/gsc/request-indexing.mjs --all # 색인 요청
 # GA4
 node scripts/ga4/discover.mjs   # 현재 구조 조회
 node scripts/ga4/configure.mjs  # KRW/Seoul/전환 이벤트 일괄 적용
+node scripts/ga4/ai-referrer-report.mjs --html  # AI 추천 유입(ChatGPT/Perplexity 등) 7d/30d baseline + HTML 저장
+# 또는 npm run ai-referrer:html
 
 # AdSense
 node scripts/adsense/status.mjs        # 사이트·광고단위·승인 상태 조회

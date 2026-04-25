@@ -13,7 +13,9 @@
     "watch": "tsc -w",
     "prepare": "npm run build",
     "cdk": "cdk",
-    "bootstrap:deploy": "cdk deploy MicroSaasBootstrap"
+    "bootstrap:deploy": "cdk deploy MicroSaasBootstrap",
+    "ai-referrer": "node scripts/ga4/ai-referrer-report.mjs",
+    "ai-referrer:html": "node scripts/ga4/ai-referrer-report.mjs --html"
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.160.0",
