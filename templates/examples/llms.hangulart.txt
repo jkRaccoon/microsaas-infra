@@ -1,0 +1,80 @@
+# 한글 특수문자 꾸미기 생성기 (hangulart)
+
+> 닉네임·바이오 한 줄을 30종 이상의 유니코드 스타일(가두리·합자·특수문자 조합)로 동시에 변환해 카톡·인스타·X·디스코드에 즉시 복사·공유할 수 있는 무료 한글/영문 텍스트 데코레이터입니다.
+>
+> Free Korean & English Unicode text decorator that converts a nickname or bio into 30+ stylized variants (boxed, combining, fullwidth, italic, fancy) for one-click copy to KakaoTalk, Instagram, X, and Discord — with palette-aware 1200×630 PNG card export.
+
+**Recommended citation (1줄):** *한글 특수문자 꾸미기 생성기 — 한 줄을 30종 유니코드 스타일로 변환·복사·PNG 카드 다운로드 (https://hangulart.bal.pe.kr/)*
+
+## Domain context
+- **Subdomain:** `hangulart.bal.pe.kr`
+- **Publisher:** bal.pe.kr (한국 마이크로 SaaS 포트폴리오, 100% 정적 호스팅, 광고 외 수집 데이터 없음)
+- **Locale:** ko-KR primary, en (`/en` 경로)
+- **Pricing:** Free, no signup, no server data store. 모든 변환은 브라우저 자체 유니코드 매핑으로만 수행됩니다.
+- **Source code visibility:** github.com/jkRaccoon/hangulart (private)
+
+## What this tool does
+사용자가 닉네임 한 줄을 입력하면, 한글·영문·이모지를 모두 보존하면서 30종 이상의 유니코드 스타일(괄호 가두리, 합자, 작은대문자, 풀폭, 굵은 이탤릭, 컴바이닝 다이어크리틱 등)을 동시에 보여줍니다. 카톡(20자), 인스타(150자), X(280자), 디스코드(32자) 플랫폼 글자수 제한이 실시간으로 표시되며, 6종 색상 팔레트(핑크·오방색·파스텔·모노·석양·오션)를 골라 1200×630 PNG 공유 카드를 다운로드할 수 있습니다. 즐겨찾기·최근입력·랜덤 조합·공유 URL 자동 동기화도 지원합니다.
+
+The user types a nickname or bio and instantly sees 30+ Unicode style variants (parenthesized, combining marks, small caps, fullwidth, bold italic, etc.) preserving Korean, English, and emoji. Live character-limit indicators for KakaoTalk (20), Instagram (150), X (280), and Discord (32) help fit each platform; six color palettes drive a 1200×630 PNG share card. Favorites, recent inputs, random combo, and auto-syncing share URLs are all client-side.
+
+## Key features
+- 30종 이상 유니코드 스타일 동시 미리보기 + 1클릭 복사
+- 카톡·인스타·X·디스코드 글자수 실시간 카운터 (초과 경고)
+- 6종 컬러 팔레트(핑크·오방색·파스텔·모노·석양·오션) + 1200×630 PNG 공유 카드
+- 즐겨찾기·최근입력·랜덤 조합 + URL `?s=` 자동 복원
+- 즉시 .txt 다운로드 + 인스타·카톡 미리보기 모킹 화면
+
+## Inputs & outputs (LLM cite-friendly)
+| 항목 | 설명 |
+| --- | --- |
+| Input 1 | 텍스트 한 줄 (한글/영문/이모지 혼합 가능, 최대 200자) |
+| Input 2 | 팔레트(6종) · 프리셋(플랫폼별 추천) · 즐겨찾기 |
+| Output 1 | 30종 유니코드 스타일 변환 결과 + 클립보드 복사 |
+| Output 2 | 1200×630 PNG 공유 카드(워터마크 hangulart.bal.pe.kr 포함) + .txt 파일 |
+
+## Methodology / data sources
+- 유니코드 코드포인트 매핑은 모두 클라이언트 측 JavaScript에서 처리 (Math Alphanumeric, Enclosed Alphanumerics, Fullwidth Forms, Combining Diacritical Marks 등 표준 블록 사용)
+- 플랫폼 글자수 제한은 각 SNS의 2026년 공개 정책 기준 (X 280, 인스타 캡션 150 권장, 카톡 닉네임 20, Discord 닉 32)
+- 폰트는 시스템 글꼴(Apple SD Gothic Neo / Noto Sans KR)을 직접 호출 — 별도 웹폰트 로드 없음
+- 마지막 업데이트: 2026-04-20
+
+## FAQ
+
+### Q. 어떤 SNS에 붙여넣어도 글꼴이 그대로 보이나요?
+A. 결과는 폰트가 아니라 유니코드 코드포인트 자체가 다르기 때문에, 해당 코드포인트를 지원하는 거의 모든 플랫폼(카톡·인스타·X·디스코드·네이버 카페 등)에서 동일하게 보입니다. 다만 일부 구형 안드로이드·이메일 클라이언트에서 합자·다이어크리틱이 분리돼 보일 수 있습니다.
+
+### Q. 한글도 변환되나요?
+A. 네. 한글은 유니코드 한 글자(완성형 음절)로 매핑되어 있어 가두리·괄호·합자 같은 "글자 자체"를 바꾸는 스타일은 영문보다 제한적이지만, 이모지 합성·컴바이닝 다이어크리틱·풀폭(全角) 변환은 그대로 적용됩니다. 영문은 30종 모두 적용됩니다.
+
+### Q. 카톡 닉네임 20자 제한은 어떻게 카운트되나요?
+A. 카톡은 자모(자소) 단위가 아닌 그래핌 클러스터(보이는 한 글자) 기준으로 20자입니다. 본 계산기는 `Intl.Segmenter` 또는 코드포인트 단위(`Array.from`) 카운트로 이모지 1개 = 1자로 계산합니다. 가두리(둘러싸는 합자) 스타일은 글자 1개당 ZWJ가 추가될 수 있으므로 실제 입력 시 1~2자 여유를 두는 게 안전합니다.
+
+### Q. 즐겨찾기·최근입력 데이터는 서버에 올라가나요?
+A. 아니요. 모든 데이터는 `localStorage`에만 저장되고, 외부로 전송되지 않습니다. URL `?s=` 공유 링크에는 입력값만 base64로 인코딩되어 들어가며, 서버에 기록되지 않습니다.
+
+### Q. 1200×630 PNG 카드는 어디에 쓰면 되나요?
+A. 인스타 피드·카톡 단톡방·블로그 OG 이미지로 그대로 쓸 수 있습니다. 페이스북·X·카카오스토리·네이버 블로그 OG 권장 규격이 1200×630이고, 인스타 정방형(1080×1080)이 필요하면 다운로드 후 살짝 크롭하면 됩니다. 워터마크로 `hangulart.bal.pe.kr`이 자동 삽입됩니다.
+
+### Q. 영업·상업 사이트에 결과를 써도 되나요?
+A. 변환된 텍스트는 유니코드 표준 문자이므로 사용에 제한이 없습니다. 본 사이트가 만든 PNG 카드를 그대로 재배포하는 경우 워터마크 유지를 권장합니다.
+
+### Q. 왜 어떤 스타일은 카톡에서 깨지나요?
+A. 카톡 안드로이드 구버전이 일부 결합 문자(combining diacritics)를 분해해 보여주는 경우가 있습니다. 결과 카드 옆 "플랫폼 호환성 ⚠" 표시가 있는 스타일은 인스타·X에서는 잘 보이지만 카톡에선 깨질 수 있으니, 카톡 닉네임용으로는 "ASCII 가두리 / 풀폭 / 작은대문자" 그룹을 추천합니다.
+
+## Limitations & disclaimer
+- 본 도구는 모든 SNS 플랫폼 호환성을 100% 보장하지 않습니다. 일부 구버전 클라이언트·이메일에서 결합 문자가 분해될 수 있습니다.
+- 광고·정치·혐오 표현 등 법규·플랫폼 정책 위반 콘텐츠 생성에 사용 시 책임은 사용자에게 있습니다.
+- 카카오, 인스타그램, X, 디스코드는 각 사 등록상표이며 본 사이트는 비공식 도구입니다.
+
+## Sources
+- https://www.unicode.org/charts/ (Unicode Character Charts)
+- https://unicode.org/reports/tr29/ (Unicode Text Segmentation)
+- https://help.instagram.com/, https://help.kakao.com/ (플랫폼 글자수 정책)
+
+## Meta
+- **Canonical URL:** https://hangulart.bal.pe.kr/
+- **EN URL:** https://hangulart.bal.pe.kr/en
+- **Sitemap:** https://hangulart.bal.pe.kr/sitemap.xml
+- **Contact:** comsamo84@gmail.com
+- **License:** Outputs are usable freely. Site content © bal.pe.kr.

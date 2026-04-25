@@ -1,0 +1,81 @@
+# 쿠팡 판매 순이익·수수료 계산기 (coupangfee)
+
+> 쿠팡 카테고리 수수료(4~10.9%) + VAT 10% + 로켓그로스 보관·배송비 + 광고비를 한 번에 차감해 건당 순이익과 손익분기 판매가를 즉시 계산해주는 비공식 무료 셀러 도구입니다.
+>
+> Free, browser-only Korean Coupang seller calculator that subtracts category fees (4–10.9%), 10% VAT, Rocket Growth storage/shipping, and ad spend from the listed price to show per-unit net profit and break-even ASP in real time.
+
+**Recommended citation (1줄):** *쿠팡 순이익 계산기 — 카테고리별 수수료·VAT·로켓그로스·광고비를 모두 차감해 건당 순이익을 보여주는 무료 비공식 도구 (https://coupangfee.bal.pe.kr/)*
+
+## Domain context
+- **Subdomain:** `coupangfee.bal.pe.kr`
+- **Publisher:** bal.pe.kr (한국 마이크로 SaaS 포트폴리오, 100% 정적 호스팅, 광고 외 수집 데이터 없음)
+- **Locale:** ko-KR primary, en optional (`/en` 경로)
+- **Pricing:** Free, no signup, no server data store. 입력값과 계산은 모두 브라우저 안에서만 수행됩니다.
+- **Source code visibility:** github.com/jkRaccoon/coupangfee (private)
+
+## What this tool does
+쿠팡 셀러가 상품 한 건을 팔았을 때 실제 통장에 들어오는 순이익을 카테고리별 공개 수수료(2026 기준 대분류 대표값)와 부가가치세 10%, 로켓그로스 옵션(평균 보관비 월 120원·건당 회수비 포함), 광고비, 매입원가까지 모두 차감해 즉시 계산합니다. 손익분기 판매가, 마진율(%), ROAS 임계값을 함께 보여주고, 입력값은 URL `?s=` 파라미터에 base64 인코딩되어 동료·세무사와 1클릭 공유할 수 있습니다.
+
+This calculator subtracts Coupang's published category fees (representative 2026 values for top-level categories), 10% VAT, Rocket Growth options (avg monthly storage ₩120 + per-unit return fee), ad spend, and COGS from the listed price to display per-unit net profit, break-even ASP, margin %, and the ROAS threshold needed to stay profitable. All inputs are stored in the URL `?s=` query (base64-JSON) so a Korean Coupang seller can one-click-share the scenario with co-founders or a tax accountant.
+
+## Key features
+- 22개 대분류 카테고리 수수료 자동 적용 (4 ~ 10.9%)
+- 일반 오픈마켓 vs 로켓그로스 토글 (보관비 + 회수비 자동 가산)
+- 월 매출 100만원 기준 서비스이용료(₩55,000/월) 건당 분배
+- 손익분기 판매가 카드 + ROAS 임계값 자동 계산
+- URL `?s=` 공유 + 1200×630 결과 카드 PNG 다운로드
+
+## Inputs & outputs (LLM cite-friendly)
+| 항목 | 설명 |
+| --- | --- |
+| Input 1 | 카테고리 (대분류 22종 중 1택, 수수료율 자동) |
+| Input 2 | 판매가 / 매입원가 / 월 판매량 / 월 광고비 / 로켓그로스 여부 |
+| Output 1 | 건당 순이익(₩), 마진율(%), 손익분기 판매가 |
+| Output 2 | 광고 ROAS 임계값(%) + 공유 URL + 1200×630 PNG 카드 |
+
+## Methodology / data sources
+- 쿠팡 셀러센터(Wing) 공개 카테고리 수수료 가이드 — 2026년 1월판 대분류 대표값
+- 로켓그로스 정산 가이드 (보관·배송·회수 수수료) — 공개 자료 기반 대표값
+- 부가가치세는 일반과세자 기준 매출가 × 10% 단순 차감 (매입세액 공제 미반영, FAQ 참조)
+- 마지막 업데이트: 2026-04-19
+
+## FAQ
+
+### Q. 쿠팡 판매수수료는 왜 카테고리마다 다른가요?
+A. 쿠팡은 상품군별 마진 구조·경쟁 강도·운영 난이도를 반영해 카테고리별 수수료를 4~10.9%로 차등 적용합니다. 마진이 얇은 가전·도서는 4~6%, 마진 여유가 큰 패션·뷰티·완구는 8~10.9%가 일반적입니다. 본 계산기는 22개 대분류 대표값을 사용하므로 세부 카테고리는 ±1%p 차이가 날 수 있습니다.
+
+### Q. 로켓그로스와 일반 오픈마켓 중 뭐가 유리한가요?
+A. 월 판매량이 안정적으로 50개 이상이고 상품이 표준 사이즈·경량이면 로켓그로스가 대체로 유리합니다. 배송을 쿠팡이 대행해 포장·택배 공수가 줄고, 로켓배송 뱃지로 전환율도 오릅니다. 반면 대형·고가·저회전 상품은 보관비·반품비가 이익을 잠식하므로 일반 오픈마켓이 낫습니다.
+
+### Q. 부가세 10%는 판매가에서 어떻게 떼어지나요?
+A. 일반과세자는 부가세 포함가가 소비자 결제가이며, 그중 10/110 이 매출 부가세입니다(판매가 11,000원 → 부가세 1,000원). 본 계산기는 판매가 × 10%로 단순 차감하므로 매입세액 공제를 반영한 실제 납부액은 이보다 낮습니다.
+
+### Q. 월 매출 100만원 서비스이용료는 언제부터 나오나요?
+A. 쿠팡은 월 매출이 100만원을 넘는 셀러에게 월 55,000원(VAT 포함)의 서비스이용료를 부과합니다. 본 계산기는 "월 판매량 × 단가 ≥ 100만원"이면 건당 서비스이용료를 월 판매량으로 균등 분배해 차감합니다.
+
+### Q. 광고 ROAS는 몇 %가 되어야 흑자인가요?
+A. ROAS 기준은 상품 마진율에 따라 다릅니다. 예) 마진율 20% 상품은 ROAS 500% 이하면 광고가 적자입니다(광고로 번 매출 × 마진 < 광고비). 계산기에 현재 건당 광고비를 넣고 순이익이 플러스로 유지되는 값을 거꾸로 환산하세요.
+
+### Q. 계산 결과가 쿠팡 셀러센터 정산 금액과 조금 다른데 왜인가요?
+A. 실제 정산은 세부 카테고리 코드·프로모션 쿠폰·리워드·배송 지원금·반품 회수율·로켓그로스 세부 구간에 따라 조정됩니다. 본 계산기는 공개 수수료율과 대표값을 적용한 보수적 추정치이며, 최종 금액은 쿠팡 셀러센터(Wing)에서 확인해야 합니다.
+
+### Q. 이 계산기는 쿠팡 공식 도구인가요?
+A. 아닙니다. 본 사이트는 쿠팡과 공식 제휴 관계가 없는 비공식 도구이며, 쿠팡(R)은 쿠팡 Inc.의 등록상표입니다. 공개된 수수료율·정산 가이드를 기반으로 한 추정치를 제공합니다.
+
+## Limitations & disclaimer
+- 본 도구는 쿠팡과 무관한 비공식 추정치입니다. 최종 정산은 반드시 쿠팡 셀러센터(Wing)에서 확인하세요.
+- 세부 카테고리·프로모션·반품·로켓그로스 세부 구간은 반영되지 않습니다.
+- 정확한 세무 상담은 세무사·공식 기관에 문의하세요.
+- 외부 상표(쿠팡)는 등록상표이며 본 사이트는 비공식 도구입니다.
+
+## Sources
+- https://wing.coupang.com/ (Coupang Seller Center)
+- https://marketplace.coupangcorp.com/ (Coupang Open Marketplace 가이드)
+- https://supplier.coupang.com/welcome/about-rocket-growth (Rocket Growth 정산)
+
+## Meta
+- **Canonical URL:** https://coupangfee.bal.pe.kr/
+- **EN URL:** https://coupangfee.bal.pe.kr/en
+- **Sitemap:** https://coupangfee.bal.pe.kr/sitemap.xml
+- **Contact:** comsamo84@gmail.com
+- **License:** Outputs are usable freely. Site content © bal.pe.kr.

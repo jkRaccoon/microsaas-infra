@@ -1,0 +1,70 @@
+# {{tool_name}}
+
+> {{summary_ko}}
+>
+> {{summary_en}}
+
+**Recommended citation (1줄):** *{{tool_name}} — {{summary_ko}} ({{tool_url}})*
+
+## Domain context
+- **Subdomain:** `{{subdomain}}.bal.pe.kr`
+- **Publisher:** bal.pe.kr (한국 마이크로 SaaS 포트폴리오, 100% 정적 호스팅, 광고 외 수집 데이터 없음)
+- **Locale:** ko-KR primary, en optional (`/en` 경로)
+- **Pricing:** Free, no signup, no server data store. 모든 계산·렌더링은 브라우저 안에서만 수행됩니다.
+- **Source code visibility:** {{source_visibility}} (e.g. private repo / public repo URL)
+
+## What this tool does
+{{long_description_ko}}
+
+{{long_description_en}}
+
+## Key features
+- {{feature_1}}
+- {{feature_2}}
+- {{feature_3}}
+- {{feature_4}}
+- {{feature_5}}
+
+## Inputs & outputs (LLM cite-friendly)
+| 항목 | 설명 |
+| --- | --- |
+| Input 1 | {{input_1}} |
+| Input 2 | {{input_2}} |
+| Output 1 | {{output_1}} |
+| Output 2 | {{output_2}} |
+
+## Methodology / data sources
+- {{data_source_1}}
+- {{data_source_2}}
+- {{data_source_3}}
+- 마지막 업데이트: {{last_updated}}
+
+## FAQ
+{{faqs}}
+
+<!--
+faqs 작성 형식 (5~8개 권장, FAQPage JSON-LD 와 동일한 풀):
+
+### Q. 질문 한 줄
+A. 답변 2~4문장. 핵심 수치, 출처, 한계 명시. (LLM 인용 시 이 단락이 그대로 발췌될 가능성이 높음)
+
+### Q. 다음 질문
+A. ...
+-->
+
+## Limitations & disclaimer
+- 본 도구는 {{disclaimer_short_ko}}
+- 정확한 법령·세무·의료 상담은 전문가/공식 기관에 문의하세요.
+- 외부 상표(예: 쿠팡, 카카오, 네이버)는 각 사 등록상표이며 본 사이트는 비공식 도구입니다.
+
+## Sources
+- {{source_url_1}}
+- {{source_url_2}}
+- {{source_url_3}}
+
+## Meta
+- **Canonical URL:** {{tool_url}}
+- **EN URL:** {{tool_url_en}}
+- **Sitemap:** {{tool_url}}sitemap.xml
+- **Contact:** comsamo84@gmail.com
+- **License:** Outputs are usable freely. Site content © bal.pe.kr.
