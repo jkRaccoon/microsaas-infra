@@ -175,6 +175,10 @@
       "siteId": "baeminfee",
       "category": "seller"
     },
+    "gmarketfee": {
+      "siteId": "gmarketfee",
+      "category": "seller"
+    },
     "chwidse": {
       "siteId": "chwidse",
       "category": "real_estate"
