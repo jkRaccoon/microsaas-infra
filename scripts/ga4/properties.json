@@ -175,6 +175,10 @@
       "siteId": "baeminfee",
       "category": "seller"
     },
+    "auctionfee": {
+      "siteId": "auctionfee",
+      "category": "seller"
+    },
     "gmarketfee": {
       "siteId": "gmarketfee",
       "category": "seller"
