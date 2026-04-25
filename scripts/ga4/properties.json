@@ -171,6 +171,10 @@
       "siteId": "smartfee",
       "category": "seller"
     },
+    "baeminfee": {
+      "siteId": "baeminfee",
+      "category": "seller"
+    },
     "chwidse": {
       "siteId": "chwidse",
       "category": "real_estate"
